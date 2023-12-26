@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>TestGame</ProjectName>
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{EF856D1F-F447-4353-8B2B-D4885F40C6E8}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;DIRECTDRAW_VERSION0=0x0600;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\TestGame.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>GameInc.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\TestGame.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <OutputFile>.\Release\TestGame.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <OutputFile>Monopoly.exe</OutputFile>
+      <AdditionalDependencies>libcmt.lib;odbc32.lib;odbccp32.lib;winmm.lib;vfw32.lib;msacm32.lib;dxguid.lib;dsound.lib;ddraw.lib;dplayx.lib;oldnames.lib;../Bink/BinkW32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;DIRECTDRAW_VERSION=0x0600;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>TheGame.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>GameInc.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\TestGame.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>false</SuppressStartupBanner>
+      <OutputFile>.\Debug\TestGame.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <OutputFile>Monopoly.exe</OutputFile>
+      <AdditionalDependencies>libcmtd.lib;imagehlp.lib;odbc32.lib;odbccp32.lib;winmm.lib;vfw32.lib;msacm32.lib;dxguid.lib;dsound.lib;ddraw.lib;dplayx.lib;oldnames.lib;../Bink/BinkW32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Image Include="BackGround.bmp" />
+    <Image Include="BackGroundEuro.bmp" />
+    <Image Include="GameIcon.ico" />
+    <Image Include="Overlay.BMP" />
+    <Image Include="Overlay2.BMP" />
+    <Image Include="TestMsg01.bmp" />
+    <Image Include="TestMsg02.bmp" />
+    <Image Include="Testmsg03.bmp" />
+    <Image Include="TestMsg04.bmp" />
+    <Image Include="TestMsg05.bmp" />
+    <Image Include="TestMsg06.bmp" />
+    <Image Include="TestMsg07.bmp" />
+    <Image Include="TestMsg08.bmp" />
+    <Image Include="TestMsg09.bmp" />
+    <Image Include="TestMsg10.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Ai.cpp" />
+    <ClCompile Include="Ai_load.cpp" />
+    <ClCompile Include="Ai_trade.cpp" />
+    <ClCompile Include="Ai_util.cpp" />
+    <ClCompile Include="Debugart.cpp" />
+    <ClCompile Include="display.cpp" />
+    <ClCompile Include="GameInc.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">GameInc.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">GameInc.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Lang.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Mdef.cpp" />
+    <ClCompile Include="Mess.cpp" />
+    <ClCompile Include="Rule.cpp" />
+    <ClCompile Include="TexInfo.cpp" />
+    <ClCompile Include="Tickler.cpp" />
+    <ClCompile Include="trade.cpp" />
+    <ClCompile Include="UDAuct.cpp" />
+    <ClCompile Include="UDBoard.cpp" />
+    <ClCompile Include="UDChat.cpp" />
+    <ClCompile Include="UDIBar.cpp" />
+    <ClCompile Include="UDOpts.cpp" />
+    <ClCompile Include="Udpenny.cpp" />
+    <ClCompile Include="UDPieces.cpp" />
+    <ClCompile Include="udpsel.cpp" />
+    <ClCompile Include="UDSound.cpp" />
+    <ClCompile Include="UDStats.cpp" />
+    <ClCompile Include="UDTrade.cpp" />
+    <ClCompile Include="UDUtils.cpp" />
+    <ClCompile Include="Unility.cpp" />
+    <ClCompile Include="Userifce.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ai.h" />
+    <ClInclude Include="Ai_load.h" />
+    <ClInclude Include="Ai_trade.h" />
+    <ClInclude Include="Ai_util.h" />
+    <ClInclude Include="C_ArtLib.h" />
+    <ClInclude Include="display.h" />
+    <ClInclude Include="GameInc.h" />
+    <ClInclude Include="Rule.h" />
+    <ClInclude Include="TexInfo.h" />
+    <ClInclude Include="trade.h" />
+    <ClInclude Include="UDAuct.h" />
+    <ClInclude Include="UDBoard.h" />
+    <ClInclude Include="UDChat.h" />
+    <ClInclude Include="UDIBar.h" />
+    <ClInclude Include="UDOpts.h" />
+    <ClInclude Include="Udpenny.h" />
+    <ClInclude Include="UDPieces.h" />
+    <ClInclude Include="UDPsel.h" />
+    <ClInclude Include="UDSound.h" />
+    <ClInclude Include="UDStats.h" />
+    <ClInclude Include="UDTrade.h" />
+    <ClInclude Include="UDUtils.h" />
+    <ClInclude Include="Userifce.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

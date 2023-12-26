@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{1038fd0c-94c1-4a63-a602-daabcbe29880}</UniqueIdentifier>
+      <Extensions>*.bmp,*.ico,*.cur</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="BackGround.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="BackGroundEuro.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Overlay.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Overlay2.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="TestMsg01.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="TestMsg02.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Testmsg03.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="TestMsg04.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="TestMsg05.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="TestMsg06.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="TestMsg07.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="TestMsg08.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="TestMsg09.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="TestMsg10.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="GameIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Ai.cpp" />
+    <ClCompile Include="Ai_load.cpp" />
+    <ClCompile Include="Ai_trade.cpp" />
+    <ClCompile Include="Ai_util.cpp" />
+    <ClCompile Include="Debugart.cpp" />
+    <ClCompile Include="display.cpp" />
+    <ClCompile Include="GameInc.cpp" />
+    <ClCompile Include="Lang.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Mdef.cpp" />
+    <ClCompile Include="Mess.cpp" />
+    <ClCompile Include="Rule.cpp" />
+    <ClCompile Include="TexInfo.cpp" />
+    <ClCompile Include="Tickler.cpp" />
+    <ClCompile Include="trade.cpp" />
+    <ClCompile Include="UDAuct.cpp" />
+    <ClCompile Include="UDBoard.cpp" />
+    <ClCompile Include="UDChat.cpp" />
+    <ClCompile Include="UDIBar.cpp" />
+    <ClCompile Include="UDOpts.cpp" />
+    <ClCompile Include="Udpenny.cpp" />
+    <ClCompile Include="UDPieces.cpp" />
+    <ClCompile Include="udpsel.cpp" />
+    <ClCompile Include="UDSound.cpp" />
+    <ClCompile Include="UDStats.cpp" />
+    <ClCompile Include="UDTrade.cpp" />
+    <ClCompile Include="UDUtils.cpp" />
+    <ClCompile Include="Unility.cpp" />
+    <ClCompile Include="Userifce.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ai.h" />
+    <ClInclude Include="Ai_load.h" />
+    <ClInclude Include="Ai_trade.h" />
+    <ClInclude Include="Ai_util.h" />
+    <ClInclude Include="C_ArtLib.h" />
+    <ClInclude Include="display.h" />
+    <ClInclude Include="GameInc.h" />
+    <ClInclude Include="Rule.h" />
+    <ClInclude Include="TexInfo.h" />
+    <ClInclude Include="trade.h" />
+    <ClInclude Include="UDAuct.h" />
+    <ClInclude Include="UDBoard.h" />
+    <ClInclude Include="UDChat.h" />
+    <ClInclude Include="UDIBar.h" />
+    <ClInclude Include="UDOpts.h" />
+    <ClInclude Include="Udpenny.h" />
+    <ClInclude Include="UDPieces.h" />
+    <ClInclude Include="UDPsel.h" />
+    <ClInclude Include="UDSound.h" />
+    <ClInclude Include="UDStats.h" />
+    <ClInclude Include="UDTrade.h" />
+    <ClInclude Include="UDUtils.h" />
+    <ClInclude Include="Userifce.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
+  </ItemGroup>
+</Project>
