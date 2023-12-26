@@ -85,16 +85,17 @@
     <Link>
       <SuppressStartupBanner>false</SuppressStartupBanner>
       <SubSystem>Windows</SubSystem>
-      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <OutputFile>Monopoly.exe</OutputFile>
-      <AdditionalDependencies>libcmt.lib;odbc32.lib;odbccp32.lib;winmm.lib;vfw32.lib;msacm32.lib;dxguid.lib;dsound.lib;ddraw.lib;dplayx.lib;oldnames.lib;../Bink/BinkW32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libcmt.lib;odbc32.lib;odbccp32.lib;winmm.lib;vfw32.lib;msacm32.lib;dxguid.lib;dsound.lib;ddraw.lib;oldnames.lib;../Bink/BinkW32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
-      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
       <Optimization>Disabled</Optimization>
       <WarningLevel>Level3</WarningLevel>
       <MinimalRebuild>true</MinimalRebuild>
@@ -128,9 +129,10 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <OutputFile>Monopoly.exe</OutputFile>
-      <AdditionalDependencies>libcmtd.lib;imagehlp.lib;odbc32.lib;odbccp32.lib;winmm.lib;vfw32.lib;msacm32.lib;dxguid.lib;dsound.lib;ddraw.lib;dplayx.lib;oldnames.lib;../Bink/BinkW32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libcmtd.lib;imagehlp.lib;odbc32.lib;odbccp32.lib;winmm.lib;vfw32.lib;msacm32.lib;dxguid.lib;dsound.lib;ddraw.lib;oldnames.lib;../Bink/BinkW32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -213,6 +215,17 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ArtLib.vcxproj">
+      <Project>{b1eddc74-5093-4230-bb95-426269b1a777}</Project>
+    </ProjectReference>
+    <ProjectReference Include="PC3DLib.vcxproj">
+      <Project>{a515e730-5c41-41c6-92bb-ae61f2659990}</Project>
+    </ProjectReference>
+    <ProjectReference Include="ZLib.vcxproj">
+      <Project>{d5fe422a-26d9-4243-ad0f-d57f38544188}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
