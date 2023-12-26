@@ -2560,8 +2560,9 @@ RULE_ResyncCauses ResyncCause)
     DBUG_DisplayNonFatalErrorMessage ("SendClientResyncGameState: State info too big to fit in message.");
 #endif
 
+
   MESS_SendAction (NOTIFY_CLIENT_RESYNC_INFO, RULE_BANK_PLAYER, ToPlayer, 0, 0, 0, 0,
-    (unsigned short *) &ResyncInfo, sizeof (ResyncInfo), NULL);
+    (wchar_t*) &ResyncInfo, sizeof (ResyncInfo), NULL);
 }
 
 
@@ -2759,7 +2760,7 @@ RULE_PlayerNumber ToPlayer, long Amount, BOOL SendAnimationMessage)
       ToPlayer,
       Amount,
       0,
-      (unsigned short *) &CashInfo, sizeof (CashInfo), NULL);
+      (wchar_t *) &CashInfo, sizeof (CashInfo), NULL);
   }
 
   /* Send out the notifications of the amount of cash the players now have,

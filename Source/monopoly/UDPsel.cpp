@@ -2822,7 +2822,8 @@ static RULE_PlayerColour udpsel_DetermineNextAvailableColour(RULE_PlayerColour e
   while (!bClrFound)
   {
     // Is colour available?  Check if any of the players have selected it.
-    for (int i = 0; i < UICurrentGameState.NumberOfPlayers; i++)
+    int i;
+    for (i = 0; i < UICurrentGameState.NumberOfPlayers; i++)
       if (UICurrentGameState.Players[i].colour == nClr) break;
 
     // If we iterated through all of the current players, and no one has this

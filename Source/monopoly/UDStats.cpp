@@ -1559,7 +1559,7 @@ void UDStats_InitMiscButtons(void)
 	*/
 void UDStats_ProcessButtonRollOver(LE_QUEUE_MessagePointer UIMessagePntr )
 {
-	static b_last_time = -1;
+	static int b_last_time = -1;
 	// get the index of the button we are currently over;
 	short iTemp = UDStats_GetButtonIndex(UIMessagePntr, MISC_BUTTONS_AREA);
 	if(iTemp > -1)
@@ -2766,7 +2766,7 @@ void UDStats_ResetDeedPositions(PlayerDeedPositionStruct* pps)
 
 	if(  DISPLAY_state.desired2DView != DISPLAY_SCREEN_TradeA  )
 	{
-		for(i=0; i<SQ_MAX_SQUARE_TYPES; i++)
+		for(int i=0; i<SQ_MAX_SQUARE_TYPES; i++)
 		{
 			//pps->Priority[i] = 0;
 			SetRect (&(pps->Location[i]), 0, 0, 0, 0);

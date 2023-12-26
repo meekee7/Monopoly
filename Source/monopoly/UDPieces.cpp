@@ -986,7 +986,7 @@ void DISPLAY_UDPIECES_Show( void )
     D3DVECTOR v1, v2, v3, v4, t1, t2, t3, t4; // Temporary variables.
     LE_SEQNCR_RuntimeInfoRecord     InfoGeneric;
     static Matrix mxResultOld;       // Can store a build translation/rotation matrix for later recycling.
-    const skipAnimValue = 14; // state to jump to to short circuit animation.
+    const int skipAnimValue = 14; // state to jump to to short circuit animation.
 
 
     if( !DISPLAY_state.IsOptionTokenAnimationsOn && (DISPLAY_state.GoingToJailStatus == 1))//skips

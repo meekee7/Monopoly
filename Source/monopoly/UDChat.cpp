@@ -704,13 +704,15 @@ void UDCHAT_SendFluffText()
           {
             if (addr.networkSystem == NS_DIRECTPLAY)
             {
-              for (int r = 0; r < 4; r++)
+              int r;
+              for (r = 0; r < 4; r++)
                 if (addr.address.directPlay[r] != addrs[p].address.directPlay[r])
                   break;
               if (r == 4)
                 flag = 0;
             } else {
-              for (int r = 0; r < 20; r++)
+              int r;  
+              for (r = 0; r < 20; r++)
                 if (addr.address.winSock[r] != addrs[p].address.winSock[r])
                   break;
                 if (r == 20)
@@ -1448,7 +1450,7 @@ BOOL UDCHAT_ProcessChatMessage(LE_QUEUE_MessagePointer UIMessagePntr)
           if (allflag) {
             MemoryHandle = RULE_AllocateHandle(wcslen(ustring)*2+2);
             if (MemoryHandle == NULL) return(TRUE);
-            MemoryPntr = (unsigned short *)RULE_LockHandle(MemoryHandle);
+            MemoryPntr = (wchar_t *)RULE_LockHandle(MemoryHandle);
             if (MemoryPntr == NULL) {
               RULE_FreeHandle(MemoryHandle);
               return(TRUE);
@@ -1472,13 +1474,15 @@ BOOL UDCHAT_ProcessChatMessage(LE_QUEUE_MessagePointer UIMessagePntr)
                   {
                     if (addr.networkSystem == NS_DIRECTPLAY)
                     {
-                      for (int r = 0; r < 4; r++)
+                      int r;
+                      for (r = 0; r < 4; r++)
                         if (addr.address.directPlay[r] != addrs[p].address.directPlay[r])
                           break;
                       if (r == 4)
                         flag = 0;
                     } else {
-                      for (int r = 0; r < 20; r++)
+                      int r;
+                      for (r = 0; r < 20; r++)
                         if (addr.address.winSock[r] != addrs[p].address.winSock[r])
                           break;
                       if (r == 20)
@@ -1490,7 +1494,7 @@ BOOL UDCHAT_ProcessChatMessage(LE_QUEUE_MessagePointer UIMessagePntr)
                 {
                   MemoryHandle = RULE_AllocateHandle(wcslen(ustring)*2+2);
                   if (MemoryHandle == NULL) return(TRUE);
-                  MemoryPntr = (unsigned short *)RULE_LockHandle(MemoryHandle);
+                  MemoryPntr = (wchar_t *)RULE_LockHandle(MemoryHandle);
                   if (MemoryPntr == NULL) {
                     RULE_FreeHandle(MemoryHandle);
                     return(TRUE);
@@ -1987,7 +1991,7 @@ if (!CHAT_BoxActive) {
     LE_GRAFIX_ShowTCB(CHAT_TextArea, 0, (5 * i), LED_IFT(DAT_MAIN, TAB_cnleftbr));
     LE_GRAFIX_ShowTCB(CHAT_TextArea, CHAT_winsize.x-1-17, (5 * i), LED_IFT(DAT_MAIN, TAB_cnrghtbr));
   }
-  for (i = 1; i < (CHAT_winsize.x / 5)-1; i++) {
+  for (int i = 1; i < (CHAT_winsize.x / 5)-1; i++) {
     LE_GRAFIX_ShowTCB(CHAT_BarArea, (5 * i), 0, LED_IFT(DAT_MAIN, TAB_cntopbar));
     LE_GRAFIX_ShowTCB(CHAT_TextArea, (5 * i), CHAT_winsize.y-3-19, LED_IFT(DAT_MAIN, TAB_cnbtmbr));
   }
@@ -2054,12 +2058,12 @@ if (!CHAT_BoxActive) {
 
 /*bleeble: add this back when we get approved art*/
     LE_GRAFIX_ShowTCB(FLUFF_TextArea, 0, FLUFF_winsize.y-18-19, LED_IFT(DAT_MAIN, TAB_cnbtmlft));
-    for (i = 0; i < ((FLUFF_winsize.y-19) / 5)-1; i++) {
+    for (int i = 0; i < ((FLUFF_winsize.y-19) / 5)-1; i++) {
       LE_GRAFIX_ShowTCB(FLUFF_TextArea, 0, (5 * i), LED_IFT(DAT_MAIN, TAB_cnleftbr));
       LE_GRAFIX_ShowTCB(FLUFF_TextArea, FLUFF_winsize.x-1-17, (5 * i), LED_IFT(DAT_MAIN, TAB_cnrghtbr));
     }
 
-    for (i = 1; i < (FLUFF_winsize.x / 5)-1; i++) {
+    for (int i = 1; i < (FLUFF_winsize.x / 5)-1; i++) {
       LE_GRAFIX_ShowTCB(FLUFF_BarArea, (5 * i), 0, LED_IFT(DAT_MAIN, TAB_cntopbar));
       LE_GRAFIX_ShowTCB(FLUFF_TextArea, (5 * i), FLUFF_winsize.y-3-19, LED_IFT(DAT_MAIN, TAB_cnbtmbr));
     }
@@ -2201,9 +2205,9 @@ BOOL CHAT_InitializeSystem(void)
     CHAT_ToPlayer[i] = TRUE;
 
   // Set up pointer arrays
-  for (i = 0; i < CHAT_KeepInputLines; i++)
+  for (int i = 0; i < CHAT_KeepInputLines; i++)
     CHAT_InputLinesPtr[i] = CHAT_InputLines[i];
-  for (i = 0; i < CHAT_KeepOutputLines; i++)
+  for (int i = 0; i < CHAT_KeepOutputLines; i++)
     CHAT_OutputLinesPtr[i] = CHAT_OutputLines[i];
 //  for (i = 0; i < NUMFLUFFTEXT; i++)
 //    CHAT_FluffText[i] = LANG_GetTextMessage(FLUFFTEXTOFFSET + i);

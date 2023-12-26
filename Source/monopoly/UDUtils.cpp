@@ -506,7 +506,7 @@ BOOL UDUTILS_LoadBoardTextureSet(Mesh* pMesh, const BoardTextureSet& txtrSet)
   nOffset = txtrSet.nNumCityPhotos;
 
   // Load the names
-  for (i = 0; i < txtrSet.nNumCityNames; i++)
+  for (int i = 0; i < txtrSet.nNumCityNames; i++)
   {
     _stprintf(szFile, TEXT("%s%s\\%s"), txtrSet.szTexturePath,
               txtrSet.szBoardType, txtrSet.aszCityNames[i]);
@@ -527,7 +527,7 @@ BOOL UDUTILS_LoadBoardTextureSet(Mesh* pMesh, const BoardTextureSet& txtrSet)
   nOffset = txtrSet.nNumCityPhotos + txtrSet.nNumCityNames;
 
   // Load the common stuff
-  for (i = 0; i < txtrSet.nNumCommon; i++)
+  for (int i = 0; i < txtrSet.nNumCommon; i++)
   {
     _stprintf(szFile, TEXT("Cities\\Common\\%s\\%s"), txtrSet.szBoardType,
               txtrSet.aszCommon[i]);
@@ -1581,7 +1581,7 @@ void UDUTILS_SwitchToBoardEURO()
   int nOffset = nNumPhotos;
 
   // Load the city property names
-  for (i = 0; i < nNumNames; i++)
+  for (int i = 0; i < nNumNames; i++)
   {                   
     _stprintf(szBitmap, TEXT("%s%s\\%s"), DISPLAY_state.customBoardPath,
               szType, aszCityNames[i]);
@@ -1604,7 +1604,7 @@ void UDUTILS_SwitchToBoardEURO()
   }
 
   // Load language based textures (include property texture templates)
-  for (i = nNumNames; i < nNumLangTxtrs; i++)
+  for (int i = nNumNames; i < nNumLangTxtrs; i++)
   {
     _stprintf(szFile, TEXT("Languages\\Lang%02d\\%s\\%s"), nLanguage, szType,
               aszLangTextures[i]);
@@ -1702,7 +1702,7 @@ void UDUTILS_SwitchToBoardEURO()
   nOffset += nNumLangTxtrs;
 
   // Load currency stuff
-  for (i = 0; i < nNumCurrencyTxtrs; i++)
+  for (int i = 0; i < nNumCurrencyTxtrs; i++)
   {
     // Format the texture's file name
     _stprintf(szFile, TEXT("Currency\\Curr%02d\\%s\\%s"),

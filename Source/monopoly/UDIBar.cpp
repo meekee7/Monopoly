@@ -2595,7 +2595,7 @@ void UDIBAR_ProcessMessage( LE_QUEUE_MessagePointer UIMessagePntr )
 
     case IBAR_View1: // The Camera button
       {
-        static topview = 0;
+        static int topview = 0;
 
         DISPLAY_state.IBarLastActionNotificationFor = IBAR_BUTTON_ANIM_Camera; // Not an engine button - mark the press here.
         // Identify the current camera 'category'
@@ -3987,7 +3987,7 @@ void UDIBAR_ProcessMessageToPlayer( RULE_ActionArgumentsPointer NewMessage )
       else
         UDIBAR_setIBarRulesState( IBAR_STATE_HotelShort, iTemp );
       // Sound
-      static lastCount = 2; // we get duplicate first messages
+      static int lastCount = 2; // we get duplicate first messages
       if( NewMessage->numberD == 0 )// There is a countdown - only give instructions the first message.
       {
         if( lastCount != NewMessage->numberD )

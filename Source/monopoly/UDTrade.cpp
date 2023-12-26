@@ -4124,7 +4124,7 @@ if ((DesiredAAfter != TradeAAfter) ||
           }
 
           // If future being traded (inner boxes)
-          for (iTemp1 = 0; iTemp1 < TradeItemListTop; iTemp1++) {
+          for (int iTemp1 = 0; iTemp1 < TradeItemListTop; iTemp1++) {
             if ((UDTradeItemList[iTemp1].numberC == (which ? TIK_IMMUNITY : TIK_FUTURE_RENT)) &&
                 (UDTradeItemList[iTemp1].numberB == (RULE_PlayerNumber)(side ? TradeAPlayerActive : TradeBPlayerActive)) &&
                 (UDTradeItemList[iTemp1].numberD > 0)) {

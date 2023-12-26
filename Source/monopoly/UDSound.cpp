@@ -1573,7 +1573,7 @@ int UDPENNY_GetCorrectCardWav(int lastCardIn)
  */
 void UDSOUND_HandleBSSMSoundNCam(int player, int square, int action)
 {
-  static initialized = FALSE; // Since we are using locals we need to initialize em here.
+  static int initialized = FALSE; // Since we are using locals we need to initialize em here.
 
   static TYPE_Tick LastSoundPlayedAt[RULE_MAX_PLAYERS][4]; // BSSM to track
   const int secondsBetweenSounds = 30;
