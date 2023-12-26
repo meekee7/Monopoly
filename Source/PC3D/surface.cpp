@@ -1186,7 +1186,8 @@ BOOL Surface::LoadMipMaps(HBITMAP* ahBitmaps, int nNumBitmaps)
   surfCaps.dwCaps = DDSCAPS_TEXTURE | DDSCAPS_MIPMAP;
 
   // Load the bitmaps
-  for (int i = 0; i < nLevels; i++)
+  int i;
+  for (i = 0; i < nLevels; i++)
   {
     // Process this level
     if (!surfLevel.CopyBitmap(ahBitmaps[i])) break;
@@ -1263,7 +1264,8 @@ BOOL Surface::LoadMipMaps(HBITMAP hCompositeBmp, int nNumLevels)
   HDC   hSurfaceDC  = NULL;
 
   // Load the bitmaps
-  for (int i = 0; i < nLevels; i++)
+  int i;
+  for (i = 0; i < nLevels; i++)
   {
     // Get the DC for the surface
     hSurfaceDC = surfLevel.GetDC();
@@ -1946,7 +1948,8 @@ DWORD GetBitShift(DWORD dwBitMask)
 
   // Determine how many bits we need to shift the mask by so it doesn't have
   //  any zeroes in the lower bits
-  for (DWORD dwShift = 0; !(dwValue & 1);  dwShift++, dwValue >>= 1);
+  DWORD dwShift;
+  for (dwShift = 0; !(dwValue & 1);  dwShift++, dwValue >>= 1);
 
   return(dwShift);
 }

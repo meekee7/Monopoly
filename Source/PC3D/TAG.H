@@ -9,7 +9,7 @@
 //             Tag()
 
 #ifdef WIN32
-	const MAX_PATHS=8;
+	const int MAX_PATHS = 8;
 	#define MAX_PATH_LEN 63
 #else
 // .......... potentially save some memory on a console if needed

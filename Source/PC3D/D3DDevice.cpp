@@ -99,7 +99,7 @@ void D3DDevice::Clear()
   }
 
   // Remove the texture formats
-  for (i = m_apTextrFormats.GetUpperBound(); i >= 0; i--)
+  for (int i = m_apTextrFormats.GetUpperBound(); i >= 0; i--)
   {
     pFormat = m_apTextrFormats.GetAt(i);
     DESTROYPOINTER(pFormat);

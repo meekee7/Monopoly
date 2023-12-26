@@ -66,9 +66,10 @@ INL void MEMUTL_CopyElements(TYPE* pDest, const TYPE* pSrc, int nCount);
 
 
 // ===========================================================================
+/*
 INL void* __cdecl operator new(UINT nSize, void* p)
 { return(p);                                                                }
-
+*/
 
 // ===========================================================================
 INL BOOL MEMUTL_IsValidAddress(const void* lp, UINT nBytes,
@@ -84,7 +85,7 @@ INL void MEMUTL_ConstructElements(TYPE* pElements, int nCount)
 {
   ASSERT(nCount == 0 || MEMUTL_IsValidAddress(pElements, nCount * sizeof(TYPE)));
   ZeroMemory((void*)pElements, nCount * sizeof(TYPE));
-  for (; nCount--; pElements++) ::new((void*)pElements) TYPE;
+  for (; nCount--; pElements++) *pElements = TYPE(); //::new((void*)pElements) TYPE;
 }
 
 // ===========================================================================

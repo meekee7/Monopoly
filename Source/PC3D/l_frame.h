@@ -8,7 +8,7 @@ class frame;
 typedef BOOL meshEnumCallback(mesh *m, frame *local, void *data);
 
 
-const BILLBOARD_ALIGN = 0x02;
+const int BILLBOARD_ALIGN = 0x02;
 
 
 // .......... A frame is the fundamental node in a scene graph. A scene graph is a tree

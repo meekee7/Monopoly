@@ -451,7 +451,7 @@ BOOL DDrawDriver::WriteINIInfo(LPCSTR szSection, int& n3DDeviceCount)
   }
 
   // Write the info for each display mode supported by the driver
-  for (i = 0; i < m_nNumDisplayModes; i++)
+  for (int i = 0; i < m_nNumDisplayModes; i++)
   {
     _stprintf(szKey, TEXT("%s_%03d"), DXINI_RESOLUTION, i);
     if (!DXINI_WriteRes(szSection, szKey, m_apDisplayModes[i]->dwWidth,

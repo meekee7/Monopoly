@@ -39,10 +39,10 @@
 // Note:  Must Define D3D_OVERLOADS to get C++ version of D3DMATRIX
 #define D3D_OVERLOADS 
 #include <ddraw.h>
-#include <dsound.h>     /* DirectSound audio stuff */
-#include <dplay.h>      /* DirectPlay networking stuff */
-#include <dinput.h>
 #include <d3d.h>
+#include <dsound.h>     /* DirectSound audio stuff */
+//#include <dplay.h>      /* DirectPlay networking stuff */
+#include <dinput.h>
 
 
 

@@ -69,7 +69,7 @@ typedef	long	swblk_t;
 typedef	unsigned int size_t;
 #endif
 
-typedef	long	time_t;
+//typedef	long	time_t;
 typedef	short	dev_t;
 typedef	long	off_t;
 typedef	u_short	uid_t;

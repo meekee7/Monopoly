@@ -369,7 +369,8 @@ int DXINI_GetDriverList(DXINI_DriverInfo* aDrivers, int nMaxDrivers)
   TCHAR szKey[MAX_PATH];
 
   // Now get the names and descriptions of the devices
-  for (int i = 0; i < nNumDrivers; i++)
+  int i;
+  for (i = 0; i < nNumDrivers; i++)
   {
     // Format the section name
     _stprintf(szSection, TEXT("%s_%02d"), DXINI_DDRAWDRIVER, i);

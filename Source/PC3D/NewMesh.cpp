@@ -80,7 +80,7 @@ Mesh::~Mesh()
     delete m_apGroups.GetAt(i);
 
   // Destroy all of the vertex sets
-  for (i = 0; i < m_apVertexSets.GetSize(); i++)
+  for (int i = 0; i < m_apVertexSets.GetSize(); i++)
     delete m_apVertexSets.GetAt(i);
 }
 

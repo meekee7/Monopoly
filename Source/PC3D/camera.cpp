@@ -135,8 +135,8 @@ void CCamera::Right( float Distance )
 
 //Camera position around the lookat spot
 //doesn't change the lookat spot
-void CCamera::OrbitFoward();
-void CCamera::OrbitBackward();
+void CCamera::OrbitFoward(){}
+void CCamera::OrbitBackward(){}
 void CCamera::OrbitUp( float RadAngle )
 {
   if((RadAngle>0.001)||(RadAngle<-0.001))
@@ -192,8 +192,8 @@ void CCamera::OrbitDown()
   */
 }
 
-void CCamera::OrbitLeft();
-void CCamera::OrbitRight();
+void CCamera::OrbitLeft(){}
+void CCamera::OrbitRight(){}
 void CCamera::Goto(FrameType *LookTo, BOOL LookClose )
 {
   vector  from(0.0f, 0.0f, -1.0f);
