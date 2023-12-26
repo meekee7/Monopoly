@@ -706,10 +706,10 @@ LE_DIRINI_PathListPointer PathListPntr)
   // Find the file name and extension, look for a period in the last part
   // of the InputName (in case the user has directories with periods).
 
-  StringPntr = strrchr (InputName, '\\');
+  StringPntr = (char*) strrchr (InputName, '\\');
   if (StringPntr == NULL)
   {
-    StringPntr = strrchr (InputName, ':');
+    StringPntr = (char*) strrchr (InputName, ':');
     if (StringPntr == NULL)
       StringPntr = (char *) InputName;
     else

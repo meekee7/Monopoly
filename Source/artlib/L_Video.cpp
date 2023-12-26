@@ -2123,7 +2123,7 @@ BOOL LI_VIDEO_AllocatePreloadingDataBuffers (MyDataPointer aviDataPtr)
 ErrorExit:
 
   // deallocate all allocated data buffers before error exit
-  for ( i = 0; i < AVI_DATA_BUFFER_NUMBER; i++ )
+  for ( int i = 0; i < AVI_DATA_BUFFER_NUMBER; i++ )
   {
     if ( aviDataPtr->dataBuffer[i] != NULL )
     {
@@ -3128,7 +3128,7 @@ BOOL LE_VIDEO_FeedVideo (
 
     bAudioDataFinished = TRUE;
 
-    for ( i = 0; i < AVI_DATA_BUFFER_NUMBER; i++ )
+    for ( int i = 0; i < AVI_DATA_BUFFER_NUMBER; i++ )
     {
       // get a pointer to an avi data buffer
       tempDataBuffer = aviDataPtr->dataBuffer[i];

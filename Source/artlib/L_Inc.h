@@ -83,9 +83,9 @@
   #include <vfw.h>        /* Video for Windows */
 
   #define D3D_OVERLOADS   /* For those C++ operators on vectors */
-  #include <dsound.h>     /* DirectSound audio stuff */
-  #include <dplay.h>      /* DirectPlay networking stuff */
   #include <d3d.h>        /* Direct3D for 3D graphics and 2D DirectDraw too */
+  #include <dsound.h>     /* DirectSound audio stuff */
+  //#include <dplay.h>      /* DirectPlay networking stuff */
 #endif
 
 

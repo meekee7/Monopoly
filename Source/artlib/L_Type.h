@@ -132,9 +132,11 @@ typedef signed short    INT16, *INT16Pointer;
 /* 32 bit numbers */
 typedef unsigned long   UNS32, *UNS32Pointer;
 
+/*
 #if ! (_MSC_VER == 1200)
 	typedef signed long     INT32, *INT32Pointer;
 #endif
+*/
 
 #define INT32_MAX LONG_MAX
 #define INT32_MIN LONG_MIN
