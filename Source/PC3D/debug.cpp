@@ -31,7 +31,7 @@
 #define MODULE_NAME_LEN 64
 #define SYMBOL_NAME_LEN 128
 
-struct SYMBOL_INFO
+struct M_SYMBOL_INFO
 {
 	DWORD   dwAddress;
 	DWORD   dwOffset;
@@ -1283,7 +1283,7 @@ static DWORD __stdcall GetModuleBase(HANDLE hProcess, DWORD dwReturnAddress)
 // Comments:    
 // ===========================================================================
 static BOOL ResolveSymbol(HANDLE hProcess, DWORD dwAddress,
-                          SYMBOL_INFO& siSymbol)
+                          M_SYMBOL_INFO& siSymbol)
 {
 	BOOL bRetval = TRUE;
 
@@ -1427,7 +1427,7 @@ void __stdcall DumpStack()
           "GetLastError() returned 0x%8.8X\r\n", GetLastError());
   }
 
-  SYMBOL_INFO   symbolInfo;
+  M_SYMBOL_INFO   symbolInfo;
 
   // Dump it out now
   for (int nAddress = 1; nAddress < nNumItems; nAddress++)
